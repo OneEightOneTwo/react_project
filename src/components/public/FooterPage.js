@@ -29,8 +29,23 @@ class FooterPage extends Component {
             activeId: 0
         }
     }
+    // 组件被渲染到页面上后立马执行，在组件的整个生命周期内只执行一次
+    //
+    componentDidMount (){
+        // console.log('读取路由');
+        // console.log(this.props.history.location.pathname);
+        if(this.props.history.location.pathname==='/dingdang'){
+            this.setState({
+                activeId: 1
+            })
+        }else if(this.props.history.location.pathname==='/cart'){
+            this.setState({
+                activeId: 2
+            })
+        }
+    }
     changePage(index,path) {
-        console.log(index,path)
+        // console.log(index,path)
         this.props.history.push(path);
         this.setState({
             activeId: index
