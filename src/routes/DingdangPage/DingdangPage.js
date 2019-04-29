@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'dva';
 // import styles from './DingdanPage.css';
-import FooterPage from '../FooterPage/FooterPage.js';
+import FooterPage from '../../components/public/FooterPage';
 class DingdangPage extends Component {
     constructor(props) {
         super(props)

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, Route, Switch, Redirect } from 'dva/router';
+// 引入组件
 import IndexPage from './routes/IndexPage/IndexPage.js';
 import DingdangPage from './routes/DingdangPage/DingdangPage.js';
 import MinePage from './routes/MinePage/MinePage.js';
