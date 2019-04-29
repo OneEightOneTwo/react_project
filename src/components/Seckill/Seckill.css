@@ -1,0 +1,210 @@
+.top{
+    width: 100%;
+    margin-bottom: 62px;
+}
+*{
+    box-sizing: border-box;
+}
+/* 秒杀专区 */
+.secondkill {
+    /* width: 100%; */
+    /* height: 10.67rem; */
+    /* line-height: .67rem; */
+    background-color: #fff;
+    position: relative;
+}
+.secondkill .timer{
+    width: 100%;
+}
+.secondkill .timer img {
+    /* display: block; */
+    height: 34px;
+    width: 100%;
+    vertical-align: middle;
+}
+.secondkill .timer .countdown {
+    float: right;
+    font-size: .23rem;
+    color: #9e9e9e;
+    position: absolute;
+    top: 0.7rem;
+    right: .1rem;
+}
+/* .second_kill .timer .countdown span {
+    width: .38rem;
+    height: .29rem;
+    line-height: .29rem;
+    border: 1px solid #9e9e9e;
+    text-align: center;
+    color: #9e9e9e;
+    font-size: .2rem;
+    margin: 0rem .02rem;
+    vertical-align: text-top;
+} */
+.drugItems {
+    width: 100%;
+    /* padding: 0rem .09rem .1rem .09rem; */
+    background-color: #fff;
+    margin-bottom: .8rem;
+    font-size: 0;
+}
+.cl:after, .cl {
+    content: "\20";
+    display: block;
+    clear: both;
+}
+.cl{
+    display: block;
+    clear: both;
+}
+
+/* 推荐 */
+.w50 {
+    width: 50%;
+}
+.fl {
+    float: left!important;
+}
+
+/* 主要内容 */
+.categoryList {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: .4rem;
+}
+.categoryList .ulDad {
+    width: 100%;
+    overflow-x: auto;
+    line-height: 42.5px;
+    height: 42.5px;
+    overflow-y: hidden;
+    border-bottom: 1px solid #eee;
+}
+.categoryList .ulDad::-webkit-scrollbar {display:none}
+.categoryList ul {
+    /* width: 10.5rem; */
+    overflow: hidden;
+    overflow-x: auto;
+}
+.categoryList ul li {
+    display: inline-block;
+    float: left;
+    padding-left: 1.5rem;
+    font-size: 12px;
+}
+.ulList li span.active {
+    color: #e94544;
+    /* border-bottom: 4px solid #e94544; */
+}
+i, span, time, a {
+    display: inline-block;
+}
+.categoryList .imgList {
+    width: 100%;
+    /* padding: 0 .13rem; */
+    position: relative;
+    font-size: 0;
+    background: #EFEFF4;
+}
+
+.imgListBox {
+    width: 100%;
+    height: 9.08rem;
+    background: #fff;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 0.6rem;
+    /* position: relative; */
+}
+.imgPreBox {
+    margin-right: 0.9rem;
+    /* width: 7.36rem; 
+    height: 5.48rem; */
+    width: 168px;
+    height: 124px;
+    flex: 2;
+}
+.imgListBox .imgPreBox img {
+    width: 100%;
+    height: 100%;
+}
+.infoBox {
+    position: relative;
+    flex: 2;
+    /* height: 7.48rem;
+    width: 10.36rem; */
+}
+.infoBox .name {
+    font-size: 0.24rem;
+    color: #333333;
+    margin-bottom: .3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.32rem;
+    font-weight: 500;
+}
+.infoBox .name .sign {
+    padding: 0 .1rem;
+    text-align: center;
+    line-height: 1.22rem;
+    color: #FFF;
+    background-color: #F5A623;
+    vertical-align: middle;
+    border-radius: .04rem;
+}
+.zhuzhi_info {
+    font-size: .62rem;
+    color: #888888;
+    margin-bottom: .3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.32rem;
+}
+.promotion {
+    height: .8rem;
+    padding: 0 .1rem;
+    color: #e94544;
+    border: 1px solid #e94544;
+    font-size: .2rem;
+    line-height: .8rem;
+    margin-right: .2rem;
+    margin-top: 0.04rem;
+    border-radius: 2px;
+}
+.infoBox .goods_buyBox {
+    position: absolute;
+    bottom: 0rem;
+    /* width: 100%; */
+}
+.aboutLeft .setmeal {
+    font-size: .9rem;
+    line-height: 1.44rem;
+    height: 1.44rem;
+    color: #e94544;
+    margin-right: .4rem;
+}
+.aboutLeft .sales {
+    color: #888;
+    font-size: .9rem;
+    line-height: 1.44rem;
+    height: 1.44rem;
+    text-decoration: line-through;
+}
+.addCarBox {
+    width: 30px;
+    height: 30px;
+    padding-left: 7px;
+}
+.infoBox .goods_buyBox .addCarImg {
+    width: 24px;
+    height: 24px;
+}
+.fr {
+    float: right!important;
+}
