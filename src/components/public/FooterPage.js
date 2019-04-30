@@ -30,7 +30,7 @@ class FooterPage extends Component {
         }
     }
     // 组件被渲染到页面上后立马执行，在组件的整个生命周期内只执行一次
-    //
+    //第次切换页面，activeId都会被重置为0
     componentDidMount (){
         // console.log('读取路由');
         // console.log(this.props.history.location.pathname);
@@ -50,6 +50,7 @@ class FooterPage extends Component {
         this.setState({
             activeId: index
         })
+        // console.log(this.state.activeId)
         // console.log(this.props)
         // this.$router.push(path);
     }
@@ -72,7 +73,7 @@ class FooterPage extends Component {
                     {
                         this.state.img.map((item, index) => {
                             return <li className={styles.footer_l} key={index} onClick={this.changePage.bind(this, index,item.path)}>
-                                <img src={index === this.state.activeId ? item['pic2'] : item['pic1']} />
+                                <img src={index === this.state.activeId ? item['pic2'] : item['pic1']} alt='' />
                             </li>
                         })
                     }
