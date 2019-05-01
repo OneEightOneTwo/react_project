@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import { connect } from 'dva';
 import styles from "./ListBox.css";
+import { withRouter } from 'dva/router';
+
 //引入高阶组件，引入footerPage的爸爸
 class ListBox extends Component {
     constructor(props) {
@@ -71,7 +73,7 @@ class ListBox extends Component {
             // ajax请求回来的数据
             specialList: [
                 {
-                    id: '01',
+                    id: '1',
                     name: '感冒抗病毒组包',
                     function: '抗病毒，治流感，快速缓解发热、头痛、咽喉痛！',
                     specification: '10mlx14支x2盒+0.35gx36粒x2盒+12粒x2板',
@@ -79,7 +81,7 @@ class ListBox extends Component {
                     agoprice: '25',
                     img: 'https://imgq.ddky.com/c/product/528902/ad/1489542907162.jpg?t=1489542907193'
                 }, {
-                    id: '02',
+                    id: '2',
                     name: '感冒抗病毒组包',
                     function: '抗病毒，治流感，快速缓解发热、头痛、咽喉痛！',
                     specification: '10mlx14支x2盒+0.35gx36粒x2盒+12粒x2板',
@@ -87,7 +89,7 @@ class ListBox extends Component {
                     agoprice: '155',
                     img: 'https://imgq.ddky.com/c/product/106745/ad/1484273616492.jpg?t=1000'
                 }, {
-                    id: '03',
+                    id: '3',
                     name: '感冒抗病毒组包',
                     function: '抗病毒，治流感，快速缓解发热、头痛、咽喉痛！',
                     specification: '10mlx14支x2盒+0.35gx36粒x2盒+12粒x2板',
@@ -95,7 +97,7 @@ class ListBox extends Component {
                     agoprice: '155',
                     img: 'https://imgq.ddky.com/c/product/534834/ad/1525412773771.jpg?t=1525412773867'
                 }, {
-                    id: '03',
+                    id: '4',
                     name: '感冒抗病毒组包',
                     function: '抗病毒，治流感，快速缓解发热、头痛、咽喉痛！',
                     specification: '10mlx14支x2盒+0.35gx36粒x2盒+12粒x2板',
@@ -103,7 +105,7 @@ class ListBox extends Component {
                     agoprice: '155',
                     img: 'https://imgq.ddky.com/c/product/534834/ad/1525412773771.jpg?t=1525412773867'
                 }, {
-                    id: '03',
+                    id: '5',
                     name: '感冒抗病毒组包',
                     function: '抗病毒，治流感，快速缓解发热、头痛、咽喉痛！',
                     specification: '10mlx14支x2盒+0.35gx36粒x2盒+12粒x2板',
@@ -113,6 +115,13 @@ class ListBox extends Component {
                 },
             ]
         }
+    }
+    // 跳转到详情页
+    gotoDetail(id){
+        // console.log(11);
+        // console.log(this.props.history)
+        this.props.history.push("/good/:"+id);
+        console.log(id);
     }
     render() {
         return (
@@ -182,10 +191,10 @@ class ListBox extends Component {
                         <img src="https://img.ddky.com/c/wap/images/ddky2/choose.jpg" alt="" />
                         <p>热销推荐</p>
                     </div>
-                    <div className={styles.special_drug}>
+                    <div className={styles.special_drug} >
                         {
                             this.state.specialList.map((item, index) => {
-                                return <div className={styles.special_drug} key={index}>
+                                return <div className={styles.special_drug} key={index} onClick={this.gotoDetail.bind(this,item.id)}>
                                     <img src={item.img} alt="" />
                                     <div className={styles.top}>
                                         <p>{item.function}</p>
@@ -223,4 +232,6 @@ class ListBox extends Component {
         )
     }
 }
+
+ListBox = withRouter(ListBox);
 export default connect()(ListBox);
