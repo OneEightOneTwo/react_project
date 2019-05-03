@@ -1,0 +1,142 @@
+html,body{
+    /* height: 100%; */
+    background: #EFEFF4;
+    box-sizing: border-box;
+}
+header{
+    font-size: 14px;
+    position: relative;
+}
+header img{
+    width: 100%;
+    display: block;
+}
+.header_user{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0,-50%);
+    display: flex;
+    align-items: center;
+}
+.header_user .userImage{
+    flex: 2;
+}
+.header_user .login{
+    flex:5;
+    margin-left: 5px;
+    color: white;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    background: white;
+}
+.form{
+    display: flex;
+    height: 100%;
+}
+.form li{
+    flex: 2;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+}
+.form li img{
+    width: 45%;
+}
+.form li i{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 5px;     
+}
+main{
+    min-height: 100%;
+    border-top: 1px solid #ccc;
+    position: relative;
+}
+main ul {
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: flex-start;
+}
+main ul li{
+    width: 30%;
+    height: 90px;
+    border-radius: 5px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    background:white;
+    margin:10px 5px 0 5px;
+    font-size: 14px;
+}
+main ul li img{
+    width: 45%;
+}
+main li i{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 5px; 
+}
+.service{
+    height: 35px;
+    width:192px;
+    border-radius: 2px;
+    border: 2px solid #cf4747;
+    line-height: 35px;
+    text-align: center;
+    font-size: 15px;
+    color: #cf4747;
+    font-weight: 500;
+    margin: 25px;
+    /* position:absolute;
+    bottom: 43px;
+    left: 50%;
+    transform: translate(-50%,0); */
+}
+footer{
+    width: 100%;
+    background: #ececec;
+    position: fixed;
+    bottom: 0;
+}
+footer ul{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+}
+footer ul li{
+    flex:1;
+    text-align: center;
+    font-size: 14px;
+}
+footer ul li:nth-child(1){
+    border-right: 1px solid #ccc;
+}
+.layer_menu{
+    position: fixed;
+    background: #000000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    filter: alpha(opacity=50);
+    display: none;
+    z-index: 1;
+}
+.cross{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 2;
+}

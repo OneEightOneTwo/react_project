@@ -6,7 +6,7 @@ function IndexPage()  {
   return (
     <div className={styles.normal}>
       首页
-      <FooterPage src={'1542445952383_104_104.jpg'}/>
+      <FooterPage/>
     </div>
   );
 }

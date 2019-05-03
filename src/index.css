@@ -4,7 +4,7 @@
 }
 /* 去掉列表默认 */
 li,ol :global(#root) {
-  list-style: none
+  list-style: none;
 }
  /*去掉input等聚焦时的蓝色边框*/
 fieldset, img,input,button :global(#root){

@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { connect } from 'dva';
+// 高阶组件
+import { withRouter } from 'dva/router';
 import styles from './FooterPage.css';
 class FooterPage extends Component {
     constructor(props) {
@@ -8,18 +10,19 @@ class FooterPage extends Component {
             img: [require('../../assets/1542445956477_104_104.jpg'),
             require('../../assets/1542445964888_104_104.jpg'),
             require('../../assets/1542445971938_104_104.jpg'),
-            require('../../assets/1542445977803_104_104.jpg')]
+            require('../../assets/1542445977803_104_104.jpg')],
         }
     }
     toPage(index) {
         if (index.index === 0) {
+            window.location.href = "#/home"
+            this.props.history.push('/home')
             this.setState({
                 img: [require('../../assets/1542445952383_104_104.jpg'),
                 require('../../assets/1542445964888_104_104.jpg'),
                 require('../../assets/1542445971938_104_104.jpg'),
                 require('../../assets/1542445977803_104_104.jpg')]
             })
-            window.location.href = "#/home"
         } else if (index.index === 1) {
             this.setState({
                 img: [require('../../assets/1542445956477_104_104.jpg'),
@@ -27,10 +30,17 @@ class FooterPage extends Component {
                 require('../../assets/1542445971938_104_104.jpg'),
                 require('../../assets/1542445977803_104_104.jpg')]
             })
+            this.props.history.push('/dingdang')
             window.location.href = "#/dingdang"
-            console.log(index.index)
         } else if (index.index === 2) {
             window.location.href = "#/cart"
+            this.setState({
+                img: [require('../../assets/1542445956477_104_104.jpg'),
+                require('../../assets/1542445964888_104_104.jpg'),
+                require('../../assets/1542445969502_104_104.jpg'),
+                require('../../assets/1542445977803_104_104.jpg')]
+            })
+
         } else if (index.index === 3) {
             window.location.href = "#/mine"
         }
@@ -62,4 +72,5 @@ class FooterPage extends Component {
         )
     }
 }
+FooterPage = withRouter(FooterPage)
 export default connect()(FooterPage)
