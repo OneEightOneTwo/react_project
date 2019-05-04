@@ -35,9 +35,17 @@ class Seckill extends Recat.Component {
                     price: '￥658.00',
                     agoprice: '￥723.00'
                 }
-            ]
+            ],
+            isSelect: 0,
+            arr: ['热销推荐', '男性健康', '女性健康', '营养保健', '避孕验孕', '慢病调理', '儿童健康', '个人护理'],
         }
 
+    }
+    setCur(index) {
+        
+        this.setState({
+            isSelect: index
+        });
     }
 
     render() {
@@ -69,8 +77,13 @@ class Seckill extends Recat.Component {
                 {/* 主要内容 */}
                 <div className={styles.categoryList + " " + styles.cl}>
                     <div className={styles.ulDad}>
-                        <ul className={styles.ulList + " " + styles.cl} style={{width:'614px'}}>
-                            <li>
+                        <ul className={styles.ulList + " " + styles.cl} style={{ width: '614px' }}>
+                            {this.state.arr.map((item, i) => {
+                                return <li key={i} onClick={this.setCur.bind(this, i)} className={this.state.isSelect === i ? styles.active : ''}>
+                                    <span >{item}</span>
+                                </li>
+                            })}
+                            {/* <li>
                                 <span className={styles.active}>热销推荐</span>
                             </li>
                             <li>
@@ -93,7 +106,7 @@ class Seckill extends Recat.Component {
                             </li>
                             <li>
                                 <span className={styles}>个人护理</span>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className={styles.imgList}>

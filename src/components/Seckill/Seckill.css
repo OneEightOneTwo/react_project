@@ -92,7 +92,10 @@
     padding-left: 1.5rem;
     font-size: 12px;
 }
-.ulList li span.active {
+.categoryList ul li:nth-child(1) span{
+    /* color: #e94544; */
+}
+ .active span {
     color: #e94544;
     /* border-bottom: 4px solid #e94544; */
 }
