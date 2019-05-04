@@ -12,7 +12,7 @@
   align-items:center;
   color: #fff;
   font-size: 12px;
-  
+  background-size: 100%;
 }
 .addBox,.searchBox{
     height: 100%;
