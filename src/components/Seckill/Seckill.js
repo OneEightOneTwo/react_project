@@ -55,6 +55,30 @@ class Seckill extends Recat.Component {
             <div className={styles.top}>
                 <Header></Header>
                 <Banner></Banner>
+                <div className={styles.priceBox}>
+                    <div className={styleMedia.priceBox_item}>
+                        <img src="https://img.ddky.com/c/wap/images/ddky2/true_icon.png" alt="" />
+                        <p>28分钟快送</p>
+                    </div>
+                    <div className={styleMedia.priceBox_item}>
+                        <img src="https://img.ddky.com/c/wap/images/ddky2/true_icon.png" alt="" />
+                        <p>满28免运费</p>
+                    </div>
+                    <div className={styleMedia.priceBox_item}>
+                        <img src="https://img.ddky.com/c/wap/images/ddky2/true_icon.png" alt="" />
+                        <p>24小时服务</p>
+                    </div>
+                </div>
+                {/* 大盒子 */}
+                <div className={styles.adviceBox}>
+                    <div>
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323873480_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323877744_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323890865_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323895801_180_168.jpg" alt="" />
+                    </div>
+                </div>
+                {/* 大盒子 */}
                 {/* 秒杀专区 */}
                 <div className={styles.secondkill}>
                     <div className={styles.timer}>

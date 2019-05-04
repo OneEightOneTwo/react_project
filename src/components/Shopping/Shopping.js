@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { connect } from 'dva';
 import styles from './Shopping.css';
-
+// import { withRouter } from 'dva/router';
 // 引入ant
 import 'antd-mobile/dist/antd-mobile.css';
 import { Checkbox, Flex } from 'antd-mobile';
@@ -30,9 +30,7 @@ class Shopping extends Component {
     }
 
     onChange = (val) => {
-        console.log(val)
-
-
+   
         this.setState({
             str: [
                 {
@@ -90,11 +88,11 @@ class Shopping extends Component {
             <div>
                 {/* 头部 */}
                 <div className={styles.top}>
-                    {/* <span className={styles.bianji}>编辑</span> */}
+                    <span className={styles.bianji}>编辑</span>
                     <h1 className={styles.h1}>清单列表</h1>
                 </div>
                 {/* 清单商品 */}
-                {/* <div className={styles.content}>
+                <div className={styles.content}>
                     <div className={styles.shopBox}>
                         <dl>
                             <dt className={styles.shoptitle}>
@@ -104,7 +102,7 @@ class Shopping extends Component {
                                             onChange={
                                                 () => this.onChangeAll()
                                             }>
-                                            <a></a>
+                                            <a style={{display:'inline-block'}}></a>
                                         </AgreeItem>
                                     </Flex.Item>
                                 </Flex>
@@ -127,7 +125,7 @@ class Shopping extends Component {
                                                                 () => this.onChange(item.defaultChecked)
                                                             }
                                                             checked={item.allChecked ? true : false}>
-                                                            <a></a>
+                                                            <a style={{display:'inline-block'}}></a>
                                                         </AgreeItem>
                                                     </Flex.Item>
                                                 </Flex>
@@ -156,17 +154,17 @@ class Shopping extends Component {
                             </dd>
                         </dl>
                     </div>
-                </div> */}
+                </div>
                 {/* 总计价格 */}
-                {/* <div className={styles.totalBox + " " + styles.cl}>
+                <div className={styles.totalBox + " " + styles.cl}>
                     <div className={styles.totalPrice + " " + styles.fl}>
                         <p>总计：￥0.00</p>
                         <span>金额：￥0.00</span>
                         <span>优惠：￥-0.00</span>
                     </div>
                     <p className={styles.settle + " " + styles.fr}>结算(0)</p>
-                </div> */}
-                <div className={styles.content}>
+                </div>
+                {/* <div className={styles.content}>
                     <div className={styles.nothingImgBox}>
                         <img src="https://img.ddky.com/c/wap/images/ddky2/onthing.png" alt="" />
                         <p>亲，这里空空的耶，快去挑选吧～</p>
@@ -176,7 +174,7 @@ class Shopping extends Component {
                             <img src="https://img.ddky.com/c/wap/images/ddky2/recommend.png" alt="" />
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
@@ -185,5 +183,5 @@ class Shopping extends Component {
 
 
 
-
+// Shopping = withRouter(Shopping)
 export default connect()(Shopping)

@@ -117,10 +117,10 @@ class ListBox extends Component {
         }
     }
     // 跳转到详情页
-    gotoDetail(id){
+    gotoDetail(id) {
         // console.log(11);
         // console.log(this.props.history)
-        this.props.history.push("/good/:"+id);
+        this.props.history.push("/good/:" + id);
         console.log(id);
     }
     render() {
@@ -198,7 +198,7 @@ class ListBox extends Component {
                     <div className={styles.special_drug} >
                         {
                             this.state.specialList.map((item, index) => {
-                                return <div className={styles.special_drug} key={index} onClick={this.gotoDetail.bind(this,item.id)}>
+                                return <div className={styles.special_drug} key={index} onClick={this.gotoDetail.bind(this, item.id)}>
                                     <img src={item.img} alt="" />
                                     <div className={styles.top}>
                                         <p>{item.function}</p>
