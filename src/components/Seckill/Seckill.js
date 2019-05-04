@@ -1,6 +1,8 @@
 import Recat from 'react'
 import { connect } from 'dva';
 import styles from './Seckill.css'
+import Header from '../../components/Index/Header';
+import Banner from '../../components/public/Banner';
 
 class Seckill extends Recat.Component {
     constructor(props) {
@@ -42,7 +44,7 @@ class Seckill extends Recat.Component {
 
     }
     setCur(index) {
-        
+
         this.setState({
             isSelect: index
         });
@@ -51,6 +53,8 @@ class Seckill extends Recat.Component {
     render() {
         return (
             <div className={styles.top}>
+                <Header></Header>
+                <Banner></Banner>
                 {/* 秒杀专区 */}
                 <div className={styles.secondkill}>
                     <div className={styles.timer}>
