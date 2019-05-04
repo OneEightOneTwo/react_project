@@ -27,7 +27,7 @@ class Banner extends Component {
     }
     render() {
         return (
-            <WingBlank>
+            <WingBlank style={{margin:"0"}}>
                 <Carousel
                     autoplay={false}
                     infinite

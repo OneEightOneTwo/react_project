@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+.am-search {
+    border-bottom: 1px solid #ddd;
+  }
+.sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+}
+.cententBox {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #FFF;
+}
+.hotSearchBox {
+    margin-bottom: 11px;
+}
+.historyBox, .hotSearchBox, .commonBox {
+  padding: 0 11px;
+}
+.hotSearchBox{
+   height: 164px;
+}
+.historyBox>p, .hotSearchBox>p, .commonBox>p {
+  font-size: 16px;
+  line-height: 44px;
+}
+.cl:after, .cl {
+  content: "\20";
+  display: block;
+  clear: both;
+}
+.historyBox li, .hotSearchBox li {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  border: 1px solid #DDD;
+  margin-right: 13px;
+  margin-bottom: 12px;
+  float: left;
+  border-radius: 5px;
+  font-size: 14px;
+}
+/* 常用分类 */
+.drugList{
+  width: 100%;
+}
+.drugList div{
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  margin:3% 0;
+}
+.drugList div img{
+  width: 53%;
+  height: 50%;
+}
+.drugList div p{
+  font-size: 12px;
+  margin:3% 0;
+}

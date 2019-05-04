@@ -5,6 +5,40 @@
 *{
     box-sizing: border-box;
 }
+/* 头部 */
+.priceBox{
+    width: 100%;
+    height: 45px;
+    padding:0 5%;
+    display: flex;
+    background: #fff;
+    border-bottom:1px solid #d4d4d4;
+}
+.priceBox div{
+    flex:1;
+    font-size: 12px;
+    color:#e94544;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+
+}
+.priceBox div img{
+ width: 13px;
+ height: 13px;
+}
+/* 大盒子 */
+.adviceBox{
+    width: 100%;
+}
+.adviceBox div{
+    display: flex;
+}
+.adviceBox img{
+    flex:1;
+    width: 93px;
+    height: 87px;
+}
 /* 秒杀专区 */
 .secondkill {
     /* width: 100%; */
@@ -92,7 +126,10 @@
     padding-left: 1.5rem;
     font-size: 12px;
 }
-.ulList li span.active {
+.categoryList ul li:nth-child(1) span{
+    /* color: #e94544; */
+}
+ .active span {
     color: #e94544;
     /* border-bottom: 4px solid #e94544; */
 }

@@ -9,6 +9,7 @@ import RegisterPage from './routes/RegisterPage/RegisterPage.js';
 import LoginPage from './routes/LoginPage/LoginPage.js';
 import GoodsListPage from './routes/GoodsListPage/GoodsListPage.js';
 import DetailsPage from './routes/DetailsPage/DetailsPage.js';
+import Search from './components/Search/Search';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -29,6 +30,8 @@ function RouterConfig({ history }) {
         <Route path="/goodslist" exact component={GoodsListPage} />
         {/* 详情页 */}
         <Route path="/good/:id" exact component={DetailsPage} />
+        {/* 搜索 */}
+        <Route path="/search" exact component={Search} />
         {/* 默认首页路由 */}
         <Redirect path='/' to={{pathname:'/home'}}  />
       </Switch>

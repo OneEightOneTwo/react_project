@@ -1,6 +1,8 @@
 import Recat from 'react'
 import { connect } from 'dva';
 import styles from './Seckill.css'
+import Header from '../../components/Index/Header';
+import Banner from '../../components/public/Banner';
 
 class Seckill extends Recat.Component {
     constructor(props) {
@@ -35,14 +37,48 @@ class Seckill extends Recat.Component {
                     price: '￥658.00',
                     agoprice: '￥723.00'
                 }
-            ]
+            ],
+            isSelect: 0,
+            arr: ['热销推荐', '男性健康', '女性健康', '营养保健', '避孕验孕', '慢病调理', '儿童健康', '个人护理'],
         }
 
+    }
+    setCur(index) {
+
+        this.setState({
+            isSelect: index
+        });
     }
 
     render() {
         return (
             <div className={styles.top}>
+                <Header></Header>
+                <Banner></Banner>
+                <div className={styles.priceBox}>
+                    <div className={styleMedia.priceBox_item}>
+                        <img src="https://img.ddky.com/c/wap/images/ddky2/true_icon.png" alt="" />
+                        <p>28分钟快送</p>
+                    </div>
+                    <div className={styleMedia.priceBox_item}>
+                        <img src="https://img.ddky.com/c/wap/images/ddky2/true_icon.png" alt="" />
+                        <p>满28免运费</p>
+                    </div>
+                    <div className={styleMedia.priceBox_item}>
+                        <img src="https://img.ddky.com/c/wap/images/ddky2/true_icon.png" alt="" />
+                        <p>24小时服务</p>
+                    </div>
+                </div>
+                {/* 大盒子 */}
+                <div className={styles.adviceBox}>
+                    <div>
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323873480_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323877744_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323890865_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323895801_180_168.jpg" alt="" />
+                    </div>
+                </div>
+                {/* 大盒子 */}
                 {/* 秒杀专区 */}
                 <div className={styles.secondkill}>
                     <div className={styles.timer}>
@@ -69,8 +105,13 @@ class Seckill extends Recat.Component {
                 {/* 主要内容 */}
                 <div className={styles.categoryList + " " + styles.cl}>
                     <div className={styles.ulDad}>
-                        <ul className={styles.ulList + " " + styles.cl} style={{width:'614px'}}>
-                            <li>
+                        <ul className={styles.ulList + " " + styles.cl} style={{ width: '614px' }}>
+                            {this.state.arr.map((item, i) => {
+                                return <li key={i} onClick={this.setCur.bind(this, i)} className={this.state.isSelect === i ? styles.active : ''}>
+                                    <span >{item}</span>
+                                </li>
+                            })}
+                            {/* <li>
                                 <span className={styles.active}>热销推荐</span>
                             </li>
                             <li>
@@ -93,7 +134,7 @@ class Seckill extends Recat.Component {
                             </li>
                             <li>
                                 <span className={styles}>个人护理</span>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className={styles.imgList}>

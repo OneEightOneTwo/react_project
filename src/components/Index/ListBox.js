@@ -117,10 +117,10 @@ class ListBox extends Component {
         }
     }
     // 跳转到详情页
-    gotoDetail(id){
+    gotoDetail(id) {
         // console.log(11);
         // console.log(this.props.history)
-        this.props.history.push("/good/:"+id);
+        this.props.history.push("/good/:" + id);
         console.log(id);
     }
     //跳转到列表页
@@ -147,14 +147,18 @@ class ListBox extends Component {
                 </div>
                 {/* 大盒子 */}
                 <div className={styles.adviceBox}>
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323873480_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323877744_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323890865_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323895801_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954235298_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954237585_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954239827_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954241650_180_168.jpg" alt="" />
+                    <div>
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323873480_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323877744_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323890865_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323895801_180_168.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954235298_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954237585_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954239827_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954241650_180_168.jpg" alt="" />
+                    </div>
                 </div>
                 {/* 大盒子 */}
                 <div className={styles.flash_sale}>
@@ -198,7 +202,7 @@ class ListBox extends Component {
                     <div className={styles.special_drug} >
                         {
                             this.state.specialList.map((item, index) => {
-                                return <div className={styles.special_drug} key={index} onClick={this.gotoDetail.bind(this,item.id)}>
+                                return <div className={styles.special_drug} key={index} onClick={this.gotoDetail.bind(this, item.id)}>
                                     <img src={item.img} alt="" />
                                     <div className={styles.top}>
                                         <p>{item.function}</p>
