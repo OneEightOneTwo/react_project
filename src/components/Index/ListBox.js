@@ -123,6 +123,10 @@ class ListBox extends Component {
         this.props.history.push("/good/:"+id);
         console.log(id);
     }
+    //跳转到列表页
+    gotoGoodsList=()=>{
+        this.props.history.push("/goodslist");
+    }
     render() {
         return (
             <div>
@@ -161,7 +165,7 @@ class ListBox extends Component {
                 <div className={styles.drugList}>
                     {
                         this.state.drugList.map((item, index) => {
-                            return <div key={index}>
+                            return <div key={index} onClick={this.gotoGoodsList}>
                                 <img src={item.url} alt="" />
                                 <p>{item.titel}</p>
                             </div>
