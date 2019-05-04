@@ -18,8 +18,7 @@
     display: flex;
     align-items: center;
 }
-header span{
-    width: 10%;
+.header span{
     margin-left: 3%;
     font-size: 15px;
 }

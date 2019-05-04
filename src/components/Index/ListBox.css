@@ -1,0 +1,137 @@
+div{
+    box-sizing: border-box;
+    /* background: #fff; */
+}
+.priceBox{
+    width: 100%;
+    height: 45px;
+    padding:0 5%;
+    display: flex;
+    background: #fff;
+    border-bottom:1px solid #d4d4d4;
+}
+.priceBox div{
+    flex:1;
+    font-size: 12px;
+    color:#e94544;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+
+}
+.priceBox div img{
+ width: 13px;
+ height: 13px;
+}
+
+.adviceBox{
+    width: 100%;
+}
+.adviceBox img{
+    width: 93px;
+    height: 87px;
+}
+.flash_sale{
+    width: 100%;
+}
+.flash_sale img{
+    width: 50%;
+}
+.drugList{
+    width: 100%;
+}
+.drugList div{
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    margin:3% 0;
+}
+.drugList div img{
+    width: 30%;
+    height: 50%;
+}
+.drugList div p{
+    font-size: 12px;
+    margin:3% 0;
+}
+/* 大盒子 */
+.special{
+    background: #fff;
+}
+.special_choose{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+}
+.special_choose img{
+    width: 15px;
+    height: 15px;
+    margin-right:3%;
+}
+.special_choose p{
+    display: inline-block;
+}
+.special_drug{
+    position: relative;
+}
+.special_drug img{
+    width: 100%;
+}
+.special_drug .top{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    box-sizing: border-box;
+    padding:25px 10px 25px 0;
+    height: 100%;
+}
+.special_drug .top p{
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-overflow:ellipsis;
+    height: 12px;
+    overflow : hidden;
+    white-space:nowrap;
+}
+.special_drug .top p:nth-child(1){
+    font-weight: 700;
+}
+.top p:nth-child(2),.top p:nth-child(3),.special_drug .down span:nth-child(2){
+    color:#686969;
+}
+.special_drug .top p:nth-child(4){
+    color:#de5d61;
+}
+.special_drug .top img{
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    top: 70%;
+    right: 5%;
+}
+.special_drug .down{
+    margin-top: 20px;
+}
+.special_drug .down span:nth-child(1){
+    color:#e94444;
+    font-size: 20px;
+    margin:0 5px 5px 0;
+    display: inline-block;
+}
+.special_drug .down span:nth-child(2){
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
+

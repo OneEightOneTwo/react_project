@@ -81,7 +81,7 @@ class MinePage extends Component {
         return (
             <div>
                 {/* 头部登录 */}
-                <header>
+                <header className={styles.header}>
                     <img src={require('../../assets/personal_bg.png')} alt="" />
                     <ul className={styles.header_user}>
                         <li className={styles.userImage}>

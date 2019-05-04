@@ -3,11 +3,11 @@ html,body{
     background: #EFEFF4;
     box-sizing: border-box;
 }
-header{
+.header{
     font-size: 14px;
     position: relative;
 }
-header img{
+.header img{
     width: 100%;
     display: block;
 }

@@ -1,7 +1,8 @@
 import { Component } from 'react';
 import { connect } from 'dva';
 // import styles from './DingdanPage.css';
-import FooterPage from '../FooterPage/FooterPage.js';
+import FooterPage from '../../components/public/FooterPage';
+import Seckill from '../../components/Seckill/Seckill'
 class DingdangPage extends Component {
     constructor(props) {
         super(props)
@@ -11,7 +12,8 @@ class DingdangPage extends Component {
     render(){
         return(
             <div>
-                叮当商城
+                {/* 叮当商城 */}
+                <Seckill />
                 <FooterPage src={'1542445962489_104_104.jpg'}/>
             </div>
         )
