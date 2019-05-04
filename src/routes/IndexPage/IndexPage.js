@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import styles from './IndexPage';
-import FooterPage from '../../components/public/FooterPage';
+import FooterPage from '../../components/public/FooterPage';                                                       
 function IndexPage()  {
   return (
     <div className={styles.normal}>

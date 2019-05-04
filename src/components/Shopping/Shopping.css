@@ -1,0 +1,227 @@
+body {
+    background-color: #EFEFF4;
+}
+*{
+    box-sizing: border-box;
+}
+/* 头部 */
+header {
+    height: 44px;
+    background-color: #FFf;
+    border-bottom: 1px solid #CBCBCB;
+    position: relative;
+}
+header>.bianji {
+    position: absolute;
+    font-size: 14px;
+    line-height: 43px;
+    height: 43px;
+    right: 15px;
+    top: 0;
+    color: #333;
+}
+header>h1 {
+    font-size: 16px;
+    line-height: 43px;
+    color: #333;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* 清单商品 */
+.shopBox {
+    border-bottom: 1px solid #EEE;
+    /* margin-bottom: 0.15rem; */
+    padding-top: 10px;
+}
+.shopBox .shoptitle {
+    height:45px;
+    line-height: 45px;
+    /* padding: 0 0.25rem; */
+    background-color: #FFF;
+    border-bottom: 1px solid #EEE;
+    position: relative;
+}
+h2{
+    position: absolute;
+    height: 44px;
+    top: 0;
+    font-size: 12px;
+    line-height: 44px;
+    width: 330px;
+    font-weight: normal;
+    left: 44px;
+}
+h2 .shopName{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 125px;
+}
+h2 .deliverTip{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+    text-align: right;
+    color: #e94544;
+    padding-right: 15px;
+}
+.shoptitle  img {
+    height: 16px;
+    width: 16px;
+    /* vertical-align: middle; */
+    margin-right: 0.1rem;
+    margin-bottom: 13px;
+}
+.item{
+    height: 100px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+}
+.left{
+    /* flex: 1; */
+}
+.right{
+    /* flex: 5; */
+    /* width: 80px;
+    height: 80px; */
+    position: relative;
+}
+.fl {
+    float: left!important;
+}
+.right .goodsInfo {
+    width: 310px;
+}
+.right .goodsImg {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+    /* position: relative; */
+    /* border: 1px solid #DDD; */
+}
+.right .goodsImg img {
+    /* width: 24px;
+    height: 24px; */
+    height: 100%;
+}
+.goods_description {
+    overflow: hidden;
+    height: 100%;
+}
+.goods_description>h3 {
+    font-size: 0.24rem;
+    /* line-height: 0.34rem; */
+    color: #333;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: normal;
+}
+.goods_description .promotionsDesc {
+    color: #888;
+    font-size: 0.24rem;
+    line-height: 17px;
+    height: 17px;
+    margin-bottom: 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+.goods_promition {
+    height: 17px;
+    overflow: hidden;
+}
+.goodsPrice {
+    font-size: 0.24rem;
+    line-height: 24px;
+    height: 24px;
+    color: #E94544;
+}
+.goodsNumEdit {
+    width: 100px;
+    height: 24px;
+    position: absolute;
+    right: -7px;
+    bottom: 5px;
+    text-align: center;
+    line-height: 24px;
+}
+.goodsNumEdit img{
+    height: 100%;
+}
+small, em, i, strong {
+    font-style: normal;
+    font-weight: normal;
+}
+.fr {
+    float: right!important;
+}
+
+/* 总计价格 */
+.totalBox {
+    padding-left: 15px;
+    border-top: 1px solid #CBCBCB;
+    position: fixed;
+    height: 43px;
+    width: 100%;
+    bottom: 62px;
+    background: white;
+}
+.totalPrice {
+    padding-top: 5px;
+    font-size: 0;
+}
+.totalPrice>p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #E94544;
+}
+
+.totalPrice>span {
+    font-size: 0.2rem;
+    line-height: 15px;
+    color: #999;
+    margin-right: 0.1rem;
+}
+
+.settle, .bianjiDel {
+    background-color: #E94544;
+    line-height:42px;
+    height: 42px;
+    width: 113px;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 购物车为空的时候 */
+.content {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 200px;
+    overflow-y: auto;
+}
+.nothingImgBox {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 0.28rem;
+    color: #888;
+    line-height: 0.4rem;
+    background-color: #FFF;
+}
+.nothingImgBox img {
+    width: 128px;
+    margin-bottom: 15px;
+}
+.recommendBox {
+    background-color: #efeff4;
+    padding: 10px 15px 5px;
+}
+.recommendBox img {
+    width: 100%;
+}
