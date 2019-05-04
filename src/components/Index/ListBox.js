@@ -143,14 +143,18 @@ class ListBox extends Component {
                 </div>
                 {/* 大盒子 */}
                 <div className={styles.adviceBox}>
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323873480_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323877744_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323890865_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20180919/1537323895801_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954235298_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954237585_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954239827_180_168.jpg" alt="" />
-                    <img src="https://img.ddky.com/c/cms/temp/20190307/1551954241650_180_168.jpg" alt="" />
+                    <div>
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323873480_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323877744_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323890865_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20180919/1537323895801_180_168.jpg" alt="" />
+                    </div>
+                    <div>
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954235298_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954237585_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954239827_180_168.jpg" alt="" />
+                        <img src="https://img.ddky.com/c/cms/temp/20190307/1551954241650_180_168.jpg" alt="" />
+                    </div>
                 </div>
                 {/* 大盒子 */}
                 <div className={styles.flash_sale}>

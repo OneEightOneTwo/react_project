@@ -27,7 +27,11 @@ div{
 .adviceBox{
     width: 100%;
 }
+.adviceBox div{
+    display: flex;
+}
 .adviceBox img{
+    flex:1;
     width: 93px;
     height: 87px;
 }
