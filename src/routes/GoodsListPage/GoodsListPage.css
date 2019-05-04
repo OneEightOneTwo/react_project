@@ -11,7 +11,7 @@
     margin-right: 4%;
 }
 .search{
-    width: 260px;
+    width: 75%;
     height: 28px;
     background-color: #EEEEEE;
     border-radius: 50px;
@@ -30,10 +30,9 @@
     color: rgb(131, 131, 131);
 }
 .header_list{
-    height: 70px;
     border-top: 1px solid #ccc; 
     background: white;
-    padding: 8px;
+    padding: 2%;
 }
 .header_list span{
     display: inline-block;
@@ -136,8 +135,8 @@
     font-size: 12px;
 }
 .goods dd{
-    width: 260px;
-    padding-right: 7px;
+    width: 72%;
+    padding-right: 3%;
 }
 .goods dd span{
     font-size: 12px;
@@ -151,13 +150,12 @@
     width: 100%;
     font-size: 12px;
     height: 30px;
+    line-height: 16px;
     display: -webkit-box;
     overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
     color: #888;
-    margin-bottom: 3px;
+    margin: 5px 0;
+    position: relative;
 }
 .goods .other{
     font-size: 12px;
