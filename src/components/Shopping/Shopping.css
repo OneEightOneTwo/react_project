@@ -164,17 +164,20 @@ small, em, i, strong {
 
 /* 总计价格 */
 .totalBox {
-    padding-left: 15px;
+    /* padding-left: 140px; */
     border-top: 1px solid #CBCBCB;
     position: fixed;
     height: 43px;
     width: 100%;
     bottom: 62px;
     background: white;
+    display: flex;
 }
 .totalPrice {
-    padding-top: 5px;
+    padding-top: 11px;
     font-size: 0;
+    flex: 2;
+    text-align: center;
 }
 .totalPrice>p {
     font-size: 14px;
@@ -197,6 +200,9 @@ small, em, i, strong {
     color: #FFF;
     font-size: 14px;
     text-align: center;
+}
+.total{
+    padding-left: 15px;
 }
 
 /* 购物车为空的时候 */
@@ -224,4 +230,27 @@ small, em, i, strong {
 }
 .recommendBox img {
     width: 100%;
+}
+
+/* 全删 */
+.bianjiDelBox{
+    height: 42px;
+    /* padding-left: 15px; */
+    line-height: 42px;
+    position: fixed;
+    width: 100%;
+    bottom: 62px;
+    background: white;
+    font-size: 16px;
+}
+.bianjiDelBox>p {
+    /* width: 5.24rem;
+    height: 0.84rem;
+    border-top: 1px solid #DDD; */
+    /* line-height: 0.83rem; */
+    padding-left: 0.25rem;
+}
+.col_c7c {
+    background-color: #C7C7CC;
+    font-size: 16px;
 }

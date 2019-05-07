@@ -238,6 +238,9 @@ i, span, time, a {
     height: 30px;
     padding-left: 7px;
 }
+.infoBox .goods_buyBox{
+    width: 180px;
+}
 .infoBox .goods_buyBox .addCarImg {
     width: 24px;
     height: 24px;
