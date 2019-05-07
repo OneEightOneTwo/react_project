@@ -17,6 +17,7 @@ class Shopping extends Component {
             arr: [],
             arr1: [],
             totalPrice: [],
+            bool:true,
             str: [
                 {
                     defaultChecked: false,
@@ -216,6 +217,17 @@ class Shopping extends Component {
         this.refs.allnum.innerHTML = '结算(' + allnum + ')'
 
     }
+    // 生命周期更新后
+    componentDidUpdate(){
+        if(this.state.List.length===0){
+            // this.setState({
+            //     bool:false
+            // })
+            this.refs.shadiao.innerHTML = ' ';
+            this.refs.dell.style.display = 'block ';
+        }
+        // console.log(this.state.List.length)
+    }
     // 商品删除
     del = () => {
         let newArr = [];
@@ -234,33 +246,33 @@ class Shopping extends Component {
         })
     }
     //商品删除全选
-    // ondelall = () => {
-    //     let val = this.state.List[0].allChecked;
-    //     for (var i in this.state.List) {
-    //         this.setState({
-    //             List: this.state.List
-    //         })
-    //         this.state.List[i].checked = !val;
+    ondelall = () => {
+        let val = this.state.List[0].allChecked;
+        for (var i in this.state.List) {
+            this.setState({
+                List: this.state.List
+            })
+            this.state.List[i].checked = !val;
 
-    //         if (this.state.List[i].checked === true) {
-    //             this.state.arr.push(this.state.List[i].id);
+            if (this.state.List[i].checked === true) {
+                this.state.arr.push(this.state.List[i].id);
 
-    //         } else {
-    //             this.state.arr = [];
-    //         }
+            } else {
+                this.state.arr = [];
+            }
 
-    //     }
-    //     this.setState({
-    //         status: [
-    //             {
-    //                 defaultChecked: !this.state.str[0].defaultChecked,
-    //                 redact: this.state.str[0].redact,
-    //                 allChecked: !this.state.str[0].allChecked
-    //             }
-    //         ]
-    //     })
+        }
+        this.setState({
+            status: [
+                {
+                    defaultChecked: !this.state.str[0].defaultChecked,
+                    redact: this.state.str[0].redact,
+                    allChecked: !this.state.str[0].allChecked
+                }
+            ]
+        })
 
-    // }
+    }
 
     render() {
 
@@ -276,7 +288,7 @@ class Shopping extends Component {
                     <h1 className={styles.h1}>清单列表</h1>
                 </div>
                 {/* 清单商品 */}
-                <div className={styles.content} >
+                <div className={styles.content} style={this.state.bool?{display:'block'}:{display:'none'}} ref='shadiao'>
                     <div className={styles.shopBox}>
                         <dl>
                             <dt className={styles.shoptitle}>
@@ -289,7 +301,7 @@ class Shopping extends Component {
                             <dd>
                                 {
                                     this.state.List.map((itm, ind) => {
-                                        return <div className={styles.item} key={ind}>
+                                        return <div className={styles.item} key={ind} >
                                             <div className={styles.left}>
                                                 {
                                                     this.state.str.map(i => {
@@ -357,7 +369,7 @@ class Shopping extends Component {
                                                 }} className={styles.bianjiDel + " " + styles.fr + " " + styles.col_c7c} ref='del' style={{ display: 'none' }}>删除</span>
                                             </div>
                                             {/* 全删 */}
-                                            {/* <div className={styles.bianjiDelBox + " " + styles.cl} ref='del' style={{ display: 'none' }}>
+                                            <div className={styles.bianjiDelBox + " " + styles.cl} ref='del' style={{ display: 'none' }}>
                                                 <p className={styles.fl}>
                                                         <Flex>
                                                             <Flex.Item>
@@ -374,7 +386,7 @@ class Shopping extends Component {
                                                  <span onClick={() => {
                                                     this.del()
                                                 }} className={styles.bianjiDel + " " + styles.fr + " " + styles.col_c7c}>删除</span>
-                                            </div> */}
+                                            </div>
                                         </div>
                                     })
                                 }
@@ -383,7 +395,7 @@ class Shopping extends Component {
                         </dl>
                     </div>
                 </div>
-                {/* <div className={styles.content}>
+                <div className={styles.content} style={this.state.bool?{display:'none'}:{display:'block'}} ref='dell'>
                     <div className={styles.nothingImgBox}>
                         <img src="https://img.ddky.com/c/wap/images/ddky2/onthing.png" alt="" />
                         <p>亲，这里空空的耶，快去挑选吧～</p>
@@ -393,7 +405,7 @@ class Shopping extends Component {
                             <img src="https://img.ddky.com/c/wap/images/ddky2/recommend.png" alt="" />
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         )
     }
