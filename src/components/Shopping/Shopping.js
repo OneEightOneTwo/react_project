@@ -17,7 +17,7 @@ class Shopping extends Component {
             arr: [],
             arr1: [],
             totalPrice: [],
-            bool:true,
+            bool: true,
             str: [
                 {
                     defaultChecked: false,
@@ -55,22 +55,22 @@ class Shopping extends Component {
     }
     // 编辑
     redact = (data) => {
-        this.state.arr = []
+        this.state.arr = [];
         this.setState({
             arr: this.state.arr
         })
         if (data[0].redact) {
-            this.refs.redact.innerHTML = '编辑'
-            this.refs.allnum.style.display = 'block'
-            this.refs.del.style.display = 'none'
+            this.refs.redact.innerHTML = '编辑';
+            this.refs.allnum.style.display = 'block';
+            this.refs.del.style.display = 'none';
             // this.refs.allprice.style.display = 'block'
         } else {
-            this.refs.redact.innerHTML = '完成'
-            this.refs.allnum.style.display = 'none'
-            this.refs.del.style.display = 'block'
+            this.refs.redact.innerHTML = '完成';
+            this.refs.allnum.style.display = 'none';
+            this.refs.del.style.display = 'block';
             // this.refs.allprice.style.display = 'none'
         }
-        data[0].redact = !data[0].redact
+        data[0].redact = !data[0].redact;
     }
     // 单选
     onChange = (ind) => {
@@ -83,21 +83,21 @@ class Shopping extends Component {
 
         //存下标
         if (this.state.List[ind].checked === true) {
-            this.state.arr.push(this.state.List[ind].id)
-            this.state.arr1.push(ind)
+            this.state.arr.push(this.state.List[ind].id);
+            this.state.arr1.push(ind);
         } else {
             for (let i in this.state.arr) {
                 if (this.state.arr[i] === this.state.List[ind].id) {
-                    this.state.arr.splice(i, 1)
+                    this.state.arr.splice(i, 1);
                 }
             }
             for (let i in this.state.arr1) {
-                this.state.arr1.splice(i, 1)
+                this.state.arr1.splice(i, 1);
             }
         }
         // 单选控制全选
         if (this.state.arr.length === this.state.List.length) {
-            this.state.str[0].allChecked = true
+            this.state.str[0].allChecked = true;
             this.setState({
                 str: [
                     {
@@ -108,7 +108,7 @@ class Shopping extends Component {
                 ]
             })
         } else {
-            this.state.str[0].allChecked = false
+            this.state.str[0].allChecked = false;
             this.setState({
                 str: [
                     {
@@ -133,7 +133,7 @@ class Shopping extends Component {
             this.state.List[i].checked = !val;
 
             if (this.state.List[i].checked === true) {
-                this.state.arr.push(this.state.List[i].id)
+                this.state.arr.push(this.state.List[i].id);
             } else {
                 this.state.arr = [];
             }
@@ -160,10 +160,10 @@ class Shopping extends Component {
         this.setState({
             List: this.state.List
         })
-        this.state.List[ind].num = list
+        this.state.List[ind].num = list;
         // console.log(list);
-        this.SumPrice(ind, list)
-        this.total()
+        this.SumPrice(ind, list);
+        this.total();
     }
     //- => 函数
     onCLickReduce(ind) {
@@ -177,10 +177,10 @@ class Shopping extends Component {
         this.setState({
             List: this.state.List
         })
-        this.state.List[ind].num = list
+        this.state.List[ind].num = list;
         // console.log(list)
-        this.SumPrice(ind, list)
-        this.total()
+        this.SumPrice(ind, list);
+        this.total();
     }
 
 
@@ -204,9 +204,9 @@ class Shopping extends Component {
         for (let i of this.state.arr) {
             for (let j of this.state.List) {
                 if (j.id === i) {
-                    num = j.num
-                    price = j.price
-                    allnum += num
+                    num = j.num;
+                    price = j.price;
+                    allnum += num;
                     // console.log(j.num)
                 }
             }
@@ -214,18 +214,21 @@ class Shopping extends Component {
             alltotal += allprice;
         }
         this.refs.allprice.innerHTML = '总计：¥' + alltotal.toFixed(2);
-        this.refs.allnum.innerHTML = '结算(' + allnum + ')'
+        this.refs.allnum.innerHTML = '结算(' + allnum + ')';
 
     }
     // 生命周期更新后
-    componentDidUpdate(){
-        if(this.state.List.length===0){
+    componentDidUpdate() {
+        if (this.state.List.length === 0) {
             // this.setState({
             //     bool:false
             // })
             this.refs.shadiao.innerHTML = ' ';
             this.refs.dell.style.display = 'block ';
         }
+        // this.setState({
+        //     bool:false
+        // })
         // console.log(this.state.List.length)
     }
     // 商品删除
@@ -288,7 +291,7 @@ class Shopping extends Component {
                     <h1 className={styles.h1}>清单列表</h1>
                 </div>
                 {/* 清单商品 */}
-                <div className={styles.content} style={this.state.bool?{display:'block'}:{display:'none'}} ref='shadiao'>
+                <div className={styles.content} style={this.state.bool ? { display: 'block' } : { display: 'none' }} ref='shadiao'>
                     <div className={styles.shopBox}>
                         <dl>
                             <dt className={styles.shoptitle}>
@@ -371,19 +374,19 @@ class Shopping extends Component {
                                             {/* 全删 */}
                                             <div className={styles.bianjiDelBox + " " + styles.cl} ref='del' style={{ display: 'none' }}>
                                                 <p className={styles.fl}>
-                                                        <Flex>
-                                                            <Flex.Item>
-                                                                <AgreeItem data-seed="logId" onChange={
-                                                                    () => this.onChangeAll()
-                                                                }
-                                                                    checked={this.state.str[0].allChecked ? true : false}
-                                                                >
-                                                                    <a style={{ display: 'inline-block' }}>全选</a>
-                                                                </AgreeItem>
-                                                            </Flex.Item>
-                                                        </Flex>
+                                                    <Flex>
+                                                        <Flex.Item>
+                                                            <AgreeItem data-seed="logId" onChange={
+                                                                () => this.onChangeAll()
+                                                            }
+                                                                checked={this.state.str[0].allChecked ? true : false}
+                                                            >
+                                                                <a style={{ display: 'inline-block' }}>全选</a>
+                                                            </AgreeItem>
+                                                        </Flex.Item>
+                                                    </Flex>
                                                 </p>
-                                                 <span onClick={() => {
+                                                <span onClick={() => {
                                                     this.del()
                                                 }} className={styles.bianjiDel + " " + styles.fr + " " + styles.col_c7c}>删除</span>
                                             </div>
@@ -395,7 +398,7 @@ class Shopping extends Component {
                         </dl>
                     </div>
                 </div>
-                <div className={styles.content} style={this.state.bool?{display:'none'}:{display:'block'}} ref='dell'>
+                <div className={styles.content} style={this.state.bool ? { display: 'none' } : { display: 'block' }} ref='dell'>
                     <div className={styles.nothingImgBox}>
                         <img src="https://img.ddky.com/c/wap/images/ddky2/onthing.png" alt="" />
                         <p>亲，这里空空的耶，快去挑选吧～</p>
